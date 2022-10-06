@@ -1,16 +1,17 @@
-# location_bug
+# Flutter Location bug
 
-A new Flutter project.
+## Reproduction steps
 
-## Getting Started
+1. Click the "Request location Permission" button to request location permission
+2. Select "Only this time" on the permission dialog
+3. Put the app in the background for 60 seconds to allow the permission to expire
+4. Return to app
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+### Request location permission and select "Only this time"
+![request permission animation](./request_permission.gif)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Return to the app after 60 seconds
+![return to app](./return_to_app.gif)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Result: stuck on the app splash screen
